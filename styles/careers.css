@@ -27,11 +27,15 @@
 }
 
 .flights p {
+    display: flex;
+    justify-content: space-between;
     color: rgb(255, 255, 255);
     text-indent: 30px;
 }
 
 .dev p {
+    display: flex;
+    justify-content: space-between;
     color: rgb(255, 255, 255);
     text-indent: 30px;
 }
@@ -52,7 +56,7 @@
     backdrop-filter: blur(1px);
 }
 
-.careers ul {
+.careers li {
     color: white;
 }
 
