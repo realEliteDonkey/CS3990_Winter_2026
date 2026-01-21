@@ -1,0 +1,71 @@
+
+.flights {
+    padding: 30px;
+    background-image: url("../pics/medivac.jpeg");
+    height: 100%;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center -50px;
+}
+
+.dev {
+    color: white;
+    padding: 30px;
+    background-image: url("../pics/dbdcover.jpg");
+    height: 100%;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center 0px;
+}
+
+.careers h3 {
+    padding: 5px;
+    width: 100px;
+    background-color: rgba(255, 0, 212, 0.479);
+}
+
+.flights p {
+    color: rgb(255, 255, 255);
+    text-indent: 30px;
+}
+
+.dev p {
+    color: rgb(255, 255, 255);
+    text-indent: 30px;
+}
+
+.flights_sec {
+    background-color: rgba(0, 0, 0, 0.37);
+    width: 40%;
+    padding: 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(1px);
+}
+
+.dev_sec {
+    background-color: rgba(0, 0, 0, 0.37);
+    width: 40%;
+    padding: 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(1px);
+}
+
+.careers ul {
+    color: white;
+}
+
+.home_link {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.849);
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 20px;
+}
+
+.home_link a {
+    padding-right: 20px;
+}
+
