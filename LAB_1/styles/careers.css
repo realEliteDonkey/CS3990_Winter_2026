@@ -1,7 +1,7 @@
 
 .flights {
     padding: 30px;
-    background-image: url("pics/medivac.jpeg");
+    background-image: url("../pics/medivac.jpeg");
     height: 100%;
     width: auto;
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@
 .dev {
     color: white;
     padding: 30px;
-    background-image: url("pics/dbdcover.jpg");
+    background-image: url("../pics/dbdcover.jpg");
     height: 100%;
     width: auto;
     background-repeat: no-repeat;
@@ -28,10 +28,12 @@
 
 .flights p {
     color: rgb(255, 255, 255);
+    text-indent: 30px;
 }
 
 .dev p {
     color: rgb(255, 255, 255);
+    text-indent: 30px;
 }
 
 .flights_sec {
