@@ -1,103 +1,116 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 3</title>
-    <link rel="stylesheet" href="styles/general.css">
-  </head>
-  
-  
-  <body>
+    <title>About Canada</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>About Canada</h1>
+    </header>
+
+    <div class="main_content">
+        <div class="left_sec">
+            <p>Canada is actually HUGE</p>
+            <p>71% of the world's maple syrup comes from Canada</p>
+            <p>The Canada-US border is the longest international border between two countries in the world</p>
+            <p>The country spans six different times zones</p>
+            <p>The country has more lakes than the rest of the world combined</p>
+        </div>
+
+        <div class="middle_sec">
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#prov_terr">Provinces & Territories</a>
+                <div class="dropdown_wrapper">
+                    <a id="activate_dropdown">MyAlberta</a>
+                    <div class="dropdown_menu">
+                        <a href="#holidays">Holidays</a>
+                        <a href="#parks">Parks</a>
+                    </div>
+                </div>
+            </nav> 
+
+            <img src="pub/canada.png" alt="Canada Map">
+
+            <div class="nav_pages">
+                <div id="home">
+                    <h2>Get to know Canada</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id saepe neque qui, repellendus nihil, ea, magni minima dolorem eius aliquam quod placeat inventore odit laudantium incidunt non dolores excepturi quisquam?</p>
+                </div>
+                <div id="prov_terr">
+                    <h2>Learn more about Canada's provinces and territories</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id saepe neque qui, repellendus nihil, ea, magni minima dolorem eius aliquam quod placeat inventore odit laudantium incidunt non dolores excepturi quisquam?</p>
+                    <div class="flags">
+                        <div id="alberta_flag">
+                            <img src="pub/alberta_flag.png" alt="Alberta Flag">
+                            <p>Alberta </p>
+                            <p>661,848 sq km</p>
+                        </div>
+                        <div id="bc_flag">
+                            <img src="pub/bc_flag.png" alt="BC Flag">
+                            <p>British Columbia </p>
+                            <p>944,735 sq km</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="holidays">
+                    <h2>Alberta public holidays</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id saepe neque qui, repellendus nihil, ea, magni minima dolorem eius aliquam quod placeat inventore odit laudantium incidunt non dolores excepturi quisquam?</p>
+                </div>
+                <div id="parks">
+                    <h2>National and Provincial Parks in Alberta</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id saepe neque qui, repellendus nihil, ea, magni minima dolorem eius aliquam quod placeat inventore odit laudantium incidunt non dolores excepturi quisquam?</p>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="right_sec">
+            <h3>IT Jobs & Work Opportunities</h3>
+            <div class="job_board">
+
+                <div class="job">
+                    <div class="screen">
+                        <h4>MOST POPULAR</h4>
+                        <h5>Cybersecurity Analyst</h5>
+                    </div>
+                    <p class="job_descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit itaque animi, consectetur provident sunt dolorem molestiae, quaerat a dolores culpa sequi sed fugit. Unde tempore dolorem veritatis autem alias cupiditate.</p>
+                    <p class="wage">$52.03 an hour</p>
+                </div>
+
+                <div class="job">
+                    <div class="screen">
+                        <h4>NEW</h4>
+                        <h5>IT Technician</h5>
+                    </div>
+                    <p class="job_descr">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    <p class="wage">$38.50 an hour</p>
+                </div>
+
+                <div class="job">
+                    <div class="screen">
+                        <h4>NEW</h4>
+                        <h5>Senior Business IT Analyst</h5>
+                    </div>
+                    <p class="job_descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat labore quaerat, molestias eligendi</p>
+                    <p class="wage">$120.0 an hour</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <p>&copy; 2026 | NWP&trade;</p>
+        <p>All rights reserved</p>
+    </footer>
     
-    <article>
-      <h2>Part 1.  CSS pseudo-classes</h2>
-      <div class="task1">
-        <div>Task1: Hi there! I am a speech bubble</div>
-        Hove over me to see a speech bubble
-      </div>
-
-      <div class="task2">
-        <ul> Task2: Select and style elems in the list 
-          <li>elem1</li>
-          <li>elem2</li>
-          <li class="special">elem3</li>
-          <li>elem4</li>
-          <li>elem5</li>
-        </ul>
-        
-      </div>
-
-
-    </article>
-
-    <article>
-      <h3>Part 2.  CSS pseudo-elements</h3>
-      <div class="task1">
-        <h4>Custom blockquote</h4>
-        <blockquote>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Pariatur animi, similique beatae quae quis quibusdam doloribus sunt 
-            ab temporibus repellendus facere odio atque sequi quas enim, 
-            officia repudiandae quasi nobis.
-        </blockquote> 
-      </div>
-
-      <div class="task2">
-        <h4>Bullet List with Icons and markers</h4>
-         <ul> 
-          <li>elem1</li>
-          <li>elem2</li>
-          <li class="special">elem3</li>
-          <li>elem4</li>
-          <li>elem5</li>
-        </ul>
-      </div>
-
-      <div class="task3">
-        <span>Right</span><span>Wrong</span> answers
-
-          <div class="wrong">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Pariatur animi, similique beatae quae quis quibusdam doloribus sunt 
-            ab temporibus repellendus facere odio atque sequi quas enim, 
-            officia repudiandae quasi nobis.</div>
-
-          <div class="correct">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Pariatur animi, similique beatae quae quis quibusdam doloribus sunt 
-            ab temporibus repellendus facere odio atque sequi quas enim, 
-            officia repudiandae quasi nobis.</div>
-      </div>
-
-
-
-    </article>
-  
-    
-    
-    
-    
-  
-
-<script type="module" src="https://s.brightspace.com/lib/bsi/2026.1.206/unbundled/mathjax.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-					if (document.querySelector('math, .d2l-element, .d2l-cplus-layout') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
-						document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
-							elm.setAttribute('style', 'display: block; height: 0.5rem;');
-						});
-
-						document.querySelectorAll('math mmultiscripts > none').forEach(elm => {
-							const mrow = document.createElementNS('http://www.w3.org/1998/Math/MathML', 'mrow');
-							elm.replaceWith(mrow);
-						});
-
-						window.D2L.MathJax.loadMathJax({
-							outputScale: 1.5,
-							renderLatex: false,
-							enableMML3Support: false
-						});
-					}
-				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2026.1.206/unbundled/prism.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-					document.querySelectorAll('.d2l-code').forEach(code => {
-						window.D2L.Prism.formatCodeElement(code);
-					});
-				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2026.1.206/unbundled/embeds.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-					window.D2L.EmbedRenderer.renderEmbeds(document.body);
-				});</script></body></html>
+</body>
+</html>

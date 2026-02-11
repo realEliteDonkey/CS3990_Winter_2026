@@ -1,0 +1,289 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    display: block;
+    padding-bottom: 5%;
+}
+
+header {
+    background-color: rgb(92, 0, 110);
+    color: white;
+    height: 10vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 5cqmin;
+}
+
+.main_content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.left_sec {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 5px;
+    background-color: white;
+}
+
+.left_sec p {
+    margin: 5px;
+    padding: 5px;
+    font-size: 2cqmin;
+    background-color: rgb(208, 107, 255);
+    color: white;
+}
+.left_sec p:hover {
+    background-color: rgb(174, 0, 255);
+}
+
+.middle_sec {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+    background-color: white;
+}
+
+.middle_sec nav {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: stretch;
+    column-gap: 5px;
+    padding: 5px;
+}
+
+a {
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    text-decoration: none;
+    border: solid white 1px;
+    border-radius: 10px;
+    background-color: rgb(208, 107, 255);
+    box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.666);
+    transition-property: all;
+    transition-duration: 50ms;
+    transform: skewx(-10deg);
+}
+
+nav > a:hover,
+#activate_dropdown:hover {
+    transform: skewx(0deg) scaleY(1.12);
+    color: white;
+    background-image: linear-gradient(to top, rgb(88, 0, 88), rgb(210, 154, 251));
+}
+
+.dropdown_wrapper {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+}
+
+.dropdown_wrapper > #activate_dropdown {
+    flex: 1;
+}
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    background-color: rgb(185, 106, 255);
+    border-radius: 10px;
+}
+
+.dropdown_wrapper:hover .dropdown_menu {
+    transform: skewx(0deg) scaleY(1.12);
+    display: flex;
+}
+
+.dropdown_menu a {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    box-shadow: none;
+    color: white;
+}
+
+.dropdown_menu a:hover {
+    transform: skewx(0deg) scaleY(1);
+    background-color: rgba(148, 0, 254, 0.738);
+}
+
+.middle_sec > img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.nav_pages > div {
+    display: none;
+}
+
+.nav_pages > div:target {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    background-color: white;
+    color: rgb(101, 0, 173);
+}
+
+.nav_pages > div:target h2 {
+    margin-bottom: 30px;
+}
+
+.middle_sec:has(.nav_pages > div:target) > img {
+    display: none;
+}
+
+.flags {
+    margin-top: 10px;
+    margin-left: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.flags img {
+    object-fit: contain;
+    height: 2cqmin;
+}
+
+.flags p:nth-of-type(2) {
+    display: none;
+}
+
+.flags > div:has(img:hover) p:nth-of-type(2) {
+    display: block;
+    font-style: italic;
+}
+
+.flags p {
+    margin-left: 5px;
+}
+
+.flags > div {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.right_sec {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: rgb(208, 107, 255);
+    flex: 1;
+}
+
+.right_sec h3 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.job_board {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.job {
+    width: 43%;
+    margin: 10px;
+}
+
+.screen {
+    background-color: rgb(172, 75, 217);
+    border: 3px solid rgba(96, 96, 96, 0.538);
+    border-radius: 0px 20px 0px 0px;
+}
+
+.job_board h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.job_board > div h4 {
+    font-size: 1cqmin;
+    width: 80%;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.job_board > div:nth-child(1) h4 {
+    color: white;
+    background-color: red;
+}
+
+.job_board div:nth-child(n + 2) h4 {
+    color: black;
+    background-color: lime;
+}
+
+.job {
+    font-size: 2cqmin;
+    color: white;
+}
+
+div.job p:nth-of-type(1) {
+    text-align: center;
+}
+
+div.job p:nth-of-type(2) {
+    text-align: right;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+    background-color: purple;
+}
+
+footer p {
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (min-width: 700px) {
+    .main_content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .middle_sec nav {
+        justify-content: flex-start;
+    }
+}
