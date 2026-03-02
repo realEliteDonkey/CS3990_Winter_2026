@@ -1,0 +1,180 @@
+a {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(196, 157, 1);
+    padding: 5px;
+    border-radius: 5px;
+}
+a:visited {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(196, 157, 1);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: rgba(196, 157, 1, 0.5);
+    color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    display: grid;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: 10px;
+  background-image: url("../imgs/computerscience-home.jpg");
+  background-size: cover;
+  background-position: center;
+  place-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  min-height: calc(300px + clamp(0px, calc(100svh - 100vw), 700px));
+}
+
+header div {
+    color: white;
+}
+
+#main_link {
+    display: inline-block;
+    font-size: larger;
+    width: 200px;
+    text-align:center;
+}
+
+
+#title {
+    color: purple;
+    font-size: xx-large;
+    font-weight: bold;
+    text-shadow: 1px 2px black;
+    text-align: left;
+}
+
+.programs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    grid-template-rows: 1fr;
+    gap: 20px;
+    padding: 20px 40px 20px 40px;
+}
+
+.window {
+    min-height: 250px;
+    width: auto;
+}
+
+#cst-c .window {
+    background-image: url("../imgs/cst_pic.jpg");
+    border-radius: 10px;
+}
+
+#cst-d .window {
+    background-image: url("../imgs/cst-diploma-pic.jpeg");
+    border-radius: 10px;
+}
+
+#bcs-d .window {
+    background-image: url("../imgs/compsci-pic.jpg");
+    border-radius: 10px;
+}
+
+.program {
+    padding: 5px;
+    padding-bottom: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.program div {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px;
+    background-position: top;
+    background-size: cover;
+    height: 40%;
+}
+
+.program div p {
+    color: white;
+    padding: 10px 20px;
+    grid-row-start: 2;
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 50px;
+    padding: 0px 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.books img {
+    width: 100%;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    transition: transform 0.25s ease-in-out;
+    overflow: hidden;
+}
+
+.hidden {
+    visibility: hidden;
+    font-weight: lighter;
+    margin: 0;
+    padding: 10px 20px;
+    min-height: 40px;
+}
+
+.books {
+    margin: 0px;
+    margin-top: 20px;
+}
+
+.book p {
+    margin-bottom: 0px;;
+}
+
+.books img:hover {
+    transform: scale(1.1);
+}
+
+.books img:hover ~ .hidden {
+    visibility: visible;
+    font-weight: lighter;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.hidden p {
+    margin: 0px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(1, 1, 56);
+    color: white;
+    padding: 0px 5px;
+}
+
+footer p:nth-child(2) {
+    text-align: right;
+}
+footer {
+    font-size: clamp(0.75em, 2vw, 1em);
+}
