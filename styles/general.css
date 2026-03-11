@@ -1,0 +1,271 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-size: clamp(0.1vw, 2rem, 4vw);
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+
+a:active, a:visited , a:link {
+    color: black;
+    text-decoration: none;
+}
+
+
+.content {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: minmax(repeat(5, 20%) ,repeat(5, 1fr)); */
+    grid-template-rows: minmax(20%, 1fr) minmax(5%, 10%) auto minmax(10%, 15%) minmax(20%, 1fr);
+    background-color: darkred;
+    width: 100%;
+    min-height: calc(100vh - 20px);
+    gap: 10px;
+    padding: 10px;
+}
+
+.cell {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+    padding: 10px;
+    place-items: center;
+}
+
+
+
+.link:hover {
+    text-decoration: none;
+    color: white;
+    background-color: red;
+}
+
+
+#D1 a {
+    max-width: 50%;;
+}
+
+
+
+#A, #D {
+    background-color: red;
+}
+
+#B, #C1, #C2, #C3, #C4, #E, #D1, #D2, #D3, #D4 {
+    background-color: salmon;
+}
+
+#F {
+    background-color: grey;
+}
+
+#A {
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+}
+
+#B {
+    grid-row: 1 / 2;
+    grid-column: 4 / 5;
+    transition: tranform 500ms ease-in-out;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+img:hover {
+    border-radius: 20px;
+    transform: scale(1.2);
+}
+
+
+#C1 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+#C2 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+#C3 {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+
+#C4 {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+    grid-row: 1fr;
+    grid-column: 1fr 1fr;
+}
+
+#D {
+    grid-row: 3 /4;
+    grid-column: 1 / 4;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    align-self: start;
+    place-self: center;
+}
+
+#D p {
+    max-width: 95%;
+    font-size: clamp(0.5rem, 2vw, 1rem);
+    line-height: 1.25;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    margin: 0;
+    align-self: center;
+    justify-self: center;
+}
+
+#E {
+    grid-row: 3 /4;
+    grid-column: 4 / 5;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    align-content: start;
+    align-self: start;
+    overflow: visible;
+}
+
+#E h3 {
+    max-width: 100%;
+    font-size: clamp(0.65rem, 0.9vw, 1rem);
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+#E p {
+    max-width: 100%;
+    font-size: clamp(0.5rem, 0.7vw, 0.8rem);
+    line-height: 1.25;
+    word-break: break-word;
+    overflow: visible;
+}
+
+#F {
+    grid-row: 4 / 5;
+    grid-column: 1 / span 4;
+    color: white;
+}
+
+#D1 {
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
+}
+
+#D2 {
+    grid-row: 5 / 6;
+    grid-column: 2 / 3;
+}
+
+#D3 {
+    grid-row: 5 / 6;
+    grid-column: 3 / 4;
+}
+
+#D4 {
+    grid-row: 5 / 6;
+    grid-column: 4 / 5;
+}
+
+
+
+#C4 {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-rows: 100%;
+    grid-template-columns: 50% 50%;
+}
+
+#C4 p {
+    display: none;
+}
+
+#C4 a {
+    grid-row: 1 / 2;
+    grid-column: 1/ 3;
+    white-space: nowrap;
+}
+
+#C4:hover a {
+    grid-column: 1/ 2;
+    font-size: clamp(0.1vw, 2vw, 4vw);
+    box-sizing: border-box;
+    text-decoration: none;
+    color:red;
+    background-color: black;
+    padding: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    white-space: nowrap;
+}
+
+#C4:hover p {
+    display: inline;
+    font-size: clamp(0.1vw, 1vw, 1vw);
+    color: white;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: black;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
