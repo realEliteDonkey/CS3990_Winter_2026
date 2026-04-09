@@ -1,171 +1,108 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 5px;
+    box-sizing: border-box;
+
 }
 
-h2 {
-    background-color: rgb(245, 153, 160);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    padding: 10px;
+html,
+body {
+    min-height: 100vh;
+}
+
+body {
+    background-image: url("../media/web-backdrop-tower.jpg");
+    background-position:top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+#h_title {
+    color: rgba(255, 255, 255, 0.705);
+}
+
+.tile_asset_description,
+.tile_asset_value {
     text-align: center;
 }
 
-.num_gen p {
-    background-color: darkred;
-    color: white;
-    text-align: center;
-    max-width: 10vw;
-}
-
-#up, #down {
-    width: 5vw;
-    height: 5vw;
-}
-
-img {
-    width: 100%;
-}
-
-.num_gen {
+.game_container {
     display: grid;
-    height: 20%;
-    grid-template-columns: repeat(9, 10%);
-    grid-template-rows: 40% 50%;
-    place-items: center;
-    gap: 10px;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 20% 80%;
+    min-height: 80vh;
 }
 
-.news {
-    padding: 10px;
-    background-color: rgb(245, 153, 160);
-    border-radius: 10px;
-}
-
-.num_gen p {
+.game_info {
     grid-row-start: 1;
     grid-row-end: 2;
-    grid-column-start: 5;
-    grid-column-end: 6;
-    width: 100%;
-    height: 100%;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
-#down {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 4;
-    grid-column-end: 5; 
-}
-
-#up {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 6;
-    grid-column-end: 7;
-}
-
-#generate {
+.game_content {
+    box-sizing: border-box;
     grid-row-start: 2;
     grid-row-end: 3;
-    grid-column-start: 3;
-    grid-column-end: 8;
-    height: 5vw;
-
-}
-
-
-.article_item {
-    background-color: rgb(238, 100, 100);
-    margin-top: 10px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: 5px solid rgba(78, 78, 78, 1);
+    border-radius: 5px;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 1fr;
-    text-align: center;
-    place-items: center;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 5px;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(77, 0, 128, 0.8), rgba(204, 76, 204, 0.8));
+
 }
 
-.article_item p { 
-    background-color: rgb(78, 18, 18);
-    color: white;
-}
-
-
-.news_articles button {
-    max-width: 10%;
-}
-
-.color_palette {
-    margin-top: 20px;
-    padding: 12px;
-    border-radius: 10px;
-    background-color: rgb(243, 234, 226);
-}
-
-.color_menu {
-    display: grid;
-    grid-template-columns: repeat(9, 24px);
-    gap: 2px;
-    width: fit-content;
-    margin-bottom: 14px;
-}
-
-.color_cell {
-    width: 24px;
-    height: 24px;
-    border: 1px solid rgb(166, 166, 166);
-    cursor: pointer;
-}
-
-#palette_text {
-    color: rgb(145, 42, 42);
-    line-height: 1.4;
-    padding: 8px;
-}
-
-.sweeties_panel {
-    margin-top: 16px;
-    padding: 8px;
-}
-
-.sweeties_toggle {
-    border: none;
-    background: transparent;
-    font-size: 2rem;
-    color: rgb(24, 135, 18);
-    cursor: pointer;
-    font-family: Georgia, serif;
-}
-
-.sweeties_list {
-    list-style: none;
-    margin-top: 8px;
-    margin-left: 36px;
-}
-
-.sweeties_item {
-    border: none;
-    background: transparent;
-    font-size: 2rem;
-    color: rgb(34, 34, 34);
-    font-family: Georgia, serif;
-    cursor: pointer;
-    text-align: left;
-}
-
-.sweeties_item.is-selected {
-    color: rgb(200, 20, 20);
-}
-
-.sweeties_preview {
-    margin-top: 12px;
-    margin-left: 36px;
-    max-width: 420px;
-}
-
-#sweeties_image {
+.tile {
+    min-width: 0;
+    min-height: 0;
     width: 100%;
-    border-radius: 6px;
-    border: 1px solid rgb(188, 164, 148);
+    height: 100%;
+    padding: 5px;
+    border: 2px solid grey;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    border-radius: 5px;
 }
+
+.tile_option_label {
+    display: block;
+}
+
+#start_game_button {
+    background: linear-gradient(90deg, rgb(77, 0, 128), rgb(204, 76, 204));
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 10px;
+    border-width: 0px;
+    cursor: pointer;
+}
+
+#start_game_button .button_text_gradient {
+    background-image: linear-gradient(90deg, red, blue);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    display: inline-block;
+}
+
+
+#score,
+#timer,
+#yap_comments {
+    background-image: linear-gradient(90deg, red, blue);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    display: block;
+    width: fit-content;
+}
+

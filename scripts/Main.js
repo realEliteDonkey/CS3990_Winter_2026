@@ -1,112 +1,29 @@
-import { Articles } from "./Articles.js";
-import { NumberGenerator } from "./NumberGenerator.js";
-import { PaletteMenu } from "./ColorButton.js";
-import { SweetsMenu } from "./SweetsMenu.js";
-import { ColorMenu } from "./ColorMenu.js";
-import {generateFruit, renderRatedFruit, attachRatingDelegation} from "./Fruit.js";
+import { QuizGame } from "./Game.js";
 
-const number_generator = new NumberGenerator();
-const articles = new Articles();
 
-function update_num_display() {
-    const num_display_element = document.body.querySelector(".num_gen p");
-    if (num_display_element) {
-        num_display_element.innerHTML = `${number_generator.count}`;
-    }
-}
-
-function num_gen_button_action() {
-    number_generator.refresh();
-    update_num_display();
-    articles.generate_articles(number_generator.count);
-}
-
-function num_gen_inc() {
-    number_generator.increment();
-    update_num_display();
-    if (articles.articles.length == 0) {
-        articles.generate_articles(number_generator.count);
-        return;
-    }
-    articles.push();
-}
-
-function num_gen_dec() {
-    number_generator.decrement();
-    update_num_display();
-    articles.pop();
-}
-
-function remove_article(id) {
-    articles.remove_article(id);
-}
 
 function main() {
-    const down = document.getElementById("down");
-    const up = document.getElementById("up");
-    const generate = document.getElementById("generate");
-    const newsArticles = document.querySelector(".news_articles");
-    if (down) {
-        down.addEventListener("click", num_gen_dec);
-    }
-    if (up) {
-        up.addEventListener("click", num_gen_inc);
-    }
-    if (generate) {
-        generate.addEventListener("click", num_gen_button_action);
-    }
+    console.log("Main");
 
-    if (newsArticles) {
-        newsArticles.addEventListener("click", (event) => {
-            const target = event.target;
-            if (!(target instanceof Element)) {
-                return;
-            }
+    const game = new QuizGame();
 
-            const button = target.closest(".remove-article");
-            if (!button) {
-                return;
-            }
+    const startButton = $("#start_game_button");
+    const gameInfoContainer = $(".game_container");
 
-            const index = Number(button.getAttribute("data-index"));
-            remove_article(index);
-        });
-    }
+    gameInfoContainer.hide();
 
-    const paletteMenu = new PaletteMenu();
-    paletteMenu.init();
-
-    const sweetsMenu = new SweetsMenu();
-    sweetsMenu.init();
-
-    update_num_display();
-
-    let fruits = [
-        {
-            fruit: "apple",
-            color: "red"
-        },
-        {
-            fruit: "pear",
-            color: "green"
-        },
-        {
-            fruit: "mango",
-            color: "red"
-        },
-        {
-            fruit: "plum",
-            color: "blue"
-        }
-    ];
-
-    
-    let color_menu = new ColorMenu(["red", "green", "blue"]);
-    color_menu.show();
-
-    generateFruit(fruits);
-    renderRatedFruit();
-    attachRatingDelegation();
+    startButton.on('mouseenter', function() {
+        $(this).css('background', 'linear-gradient(-90deg, rgb(77, 0, 128), rgb(204, 76, 204))');
+        $(this).css('transform', 'scale(1.1)');
+    });
+    startButton.on('mouseleave', function() {
+        $(this).css('background', 'linear-gradient(90deg, rgb(77, 0, 128), rgb(204, 76, 204))');
+        $(this).css('transform', 'scale(1)');
+    });
+    startButton.on('click', function() {
+        gameInfoContainer.show();
+        game.startGame();
+    });  
 
 }
 

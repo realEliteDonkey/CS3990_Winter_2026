@@ -3,70 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Web Game</title>
+    <title>Game Final</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="styles/general.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/Main.js"></script>
 </head>
 <body>
-    <h2>Document Object Model. Event Handling: A3(8)</h2>
+    <h1 id="h_title">Final Project: Game-Based Quiz</h1>
 
-    <div class="news">
-        <div class="num_gen">
-            <button id="down"><img src="media/down-arrow.png" alt="Down"></button>
-            <p></p>
-            <button id="up"><img src="media/up-arrow.png" alt="Up"></button>
-            <button id="generate" value="Generator">Make your number now!</button>
+    <button type="button" id="start_game_button"><span class="button_text_gradient">Start Game</span></button>
+
+    <div class="game_container">
+
+        <div class="game_info">
+            <h3 id="score"></h3>
+
+            <h3 id="messages">Messages</h3>
+
+            <h3 id="timer"></h3>
         </div>
 
-        <div class="news_articles">
+        <div class="game_content">
 
         </div>
+
     </div>
-
-    <div class="color_palette">
-        <div class="color_menu">
-
-        </div>
-        <p id="palette_text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quod perspiciatis, quos quas odio, nisi unde excepturi labore iste ab corrupti nulla. Architecto, corrupti. Quisquam provident molestias enim harum libero!
-            Aliquam neque nulla provident eum voluptate architecto voluptas explicabo maxime ex iusto! Ipsum recusandae, beatae cupiditate corrupti illo incidunt nulla voluptatum ea harum. Alias consequatur esse suscipit nobis. Possimus, esse.
-            Facilis natus id dolorem perferendis saepe vero provident ipsa, voluptates earum non officia sint incidunt nobis numquam voluptate eligendi? Ea fugiat illum porro voluptate minus ipsa impedit rerum suscipit nulla!
-            Inventore ratione vero ullam sit recusandae natus dolores temporibus eveniet? Soluta iste suscipit saepe aliquam officiis voluptates commodi earum ipsum! Sunt corrupti consectetur, explicabo corporis repellat recusandae veniam eum ducimus.
-            Perferendis natus quisquam exercitationem et id molestiae, nesciunt est eaque quaerat, distinctio corporis culpa quasi illum repudiandae enim aspernatur veniam voluptatibus. Soluta sapiente at impedit eveniet ipsam unde cum repellendus?
-        </p>
-
-        <div id="sweeties_panel" class="sweeties_panel">
-            <button type="button" class="sweeties_toggle" aria-expanded="false">▶ Sweeties (click me)!</button>
-            <ul class="sweeties_list" hidden>
-                <li><button type="button" class="sweeties_item" data-sweet="Cake">Cake</button></li>
-                <li><button type="button" class="sweeties_item" data-sweet="Donut">Donut</button></li>
-                <li><button type="button" class="sweeties_item" data-sweet="Honey">Honey</button></li>
-            </ul>
-            <div class="sweeties_preview" hidden>
-                <img id="sweeties_image" alt="">
-            </div>
-        </div>
-    </div>
-
-    <div id="colors">
-        <h2>Select Color</h2>
-    </div>
-
-    <div id="fruits">
-        <ul>Fruits:</ul>
-    </div>
-
-    <div id="rated_fruit_area" style="margin-top: 14px; padding: 10px;"></div>
-
 </body>
 </html>
-
-
-
-
-
-
-
 
 
