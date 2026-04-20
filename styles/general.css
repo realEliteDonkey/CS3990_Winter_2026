@@ -1,171 +1,83 @@
 * {
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
-h2 {
-    background-color: rgb(245, 153, 160);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
+html,
+body {
+    background-color: #FFEBC7;
 }
 
-.num_gen p {
-    background-color: darkred;
-    color: white;
-    text-align: center;
-    max-width: 10vw;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    min-height: 100vh;
 }
 
-#up, #down {
-    width: 5vw;
-    height: 5vw;
-}
-
-img {
+#app {
     width: 100%;
+    max-width: 100%;
+    border: 2px solid #5BA8A0;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #F5F0E8;
 }
 
-.num_gen {
-    display: grid;
-    height: 20%;
-    grid-template-columns: repeat(9, 10%);
-    grid-template-rows: 40% 50%;
-    place-items: center;
-    gap: 10px;
-}
-
-.news {
-    padding: 10px;
-    background-color: rgb(245, 153, 160);
-    border-radius: 10px;
-}
-
-.num_gen p {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 5;
-    grid-column-end: 6;
-    width: 100%;
-    height: 100%;
-}
-
-#down {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 4;
-    grid-column-end: 5; 
-}
-
-#up {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 6;
-    grid-column-end: 7;
-}
-
-#generate {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 3;
-    grid-column-end: 8;
-    height: 5vw;
-
-}
-
-
-.article_item {
-    background-color: rgb(238, 100, 100);
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 1fr;
-    text-align: center;
-    place-items: center;
-}
-
-.article_item p { 
-    background-color: rgb(78, 18, 18);
-    color: white;
-}
-
-
-.news_articles button {
-    max-width: 10%;
-}
-
-.color_palette {
-    margin-top: 20px;
-    padding: 12px;
-    border-radius: 10px;
-    background-color: rgb(243, 234, 226);
-}
-
-.color_menu {
-    display: grid;
-    grid-template-columns: repeat(9, 24px);
-    gap: 2px;
-    width: fit-content;
-    margin-bottom: 14px;
-}
-
-.color_cell {
-    width: 24px;
-    height: 24px;
-    border: 1px solid rgb(166, 166, 166);
-    cursor: pointer;
-}
-
-#palette_text {
-    color: rgb(145, 42, 42);
-    line-height: 1.4;
-    padding: 8px;
-}
-
-.sweeties_panel {
-    margin-top: 16px;
-    padding: 8px;
-}
-
-.sweeties_toggle {
-    border: none;
-    background: transparent;
-    font-size: 2rem;
-    color: rgb(24, 135, 18);
-    cursor: pointer;
-    font-family: Georgia, serif;
-}
-
-.sweeties_list {
+#fruits {
+    display: flex;
     list-style: none;
-    margin-top: 8px;
-    margin-left: 36px;
+    background-color: #5BA8A0;
 }
 
-.sweeties_item {
-    border: none;
-    background: transparent;
-    font-size: 2rem;
-    color: rgb(34, 34, 34);
-    font-family: Georgia, serif;
+#fruits li {
+    flex: 1;
+    text-align: center;
+    padding: 12px 8px;
+    color: #E0F4F2;
+    font-weight: 600;
+    font-family: Arial, sans-serif;
+    font-size: 0.95rem;
     cursor: pointer;
-    text-align: left;
+    transition: background-color 1.0s;
 }
 
-.sweeties_item.is-selected {
-    color: rgb(200, 20, 20);
+#fruitDesc {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 25px;
+    font-family: Arial, sans-serif;
 }
 
-.sweeties_preview {
-    margin-top: 12px;
-    margin-left: 36px;
-    max-width: 420px;
+
+
+#fruitDesc h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    color: #2C2C2C;
+    min-width: 100%;
 }
 
-#sweeties_image {
-    width: 100%;
-    border-radius: 6px;
-    border: 1px solid rgb(188, 164, 148);
+.fruit-body {
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
+
+.fruit-img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+#fruitDesc p {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 2.0;
+}
+
